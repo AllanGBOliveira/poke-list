@@ -1,0 +1,76 @@
+.pokemon {
+  transition: all 0.25s ease;
+  box-shadow: none;
+  border: 1px solid rgba($color: $color-2, $alpha: 0.2);
+
+  img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+    display: block;
+    transition: all 0.25s ease;
+  }
+
+  &-id {
+    line-height: 1;
+    margin-bottom: 0;
+    background-color: $color-1;
+    color: white;
+    padding: 4px 8px;
+    transition: all 0.25s ease;
+  }
+
+  &-name {
+    text-transform: capitalize;
+    background-color: $color-2;
+    color: white;
+    padding: 4px 8px;
+    margin-bottom: 0;
+    box-shadow: 0 3px 3px rgba($color: $color-2, $alpha: 0.1);
+    transition: all 0.25s ease;
+  }
+
+  &-thumb {
+    padding: 8px;
+    aspect-ratio: 1/1;
+    // filter: blur(0.9px);
+  }
+
+
+  &:hover {
+    .pokemon-thumb {
+      animation: fade 0.3s linear;
+    }
+  }
+}
+
+.v-sheet.v-card:not(.v-sheet--outlined) {
+  &.pokemon {
+    box-shadow: none;
+  }
+}
+
+.theme--light {
+  .v-sheet.v-card:not(.v-sheet--outlined) {
+    &.pokemon {
+      border-color: rgba($color: $color-2, $alpha: 0.2);
+    }
+  }
+}
+
+.theme--dark {
+  .v-sheet.v-card:not(.v-sheet--outlined) {
+    &.pokemon {
+      border-color: rgba($color: $color-3, $alpha: 0.3);
+    }
+  }
+}
+
+@keyframes fade {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
