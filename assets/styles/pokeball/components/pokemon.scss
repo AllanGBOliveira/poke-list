@@ -101,10 +101,10 @@
         }
       }
 
-      &.eletric {
+      &.electric {
         a {
-          background-color: $eletric-color;
-          border-color: $eletric-border-color;
+          background-color: $electric-color;
+          border-color: $electric-border-color;
         }
       }
 
@@ -161,6 +161,7 @@
         a {
           background-color: $ice-color;
           border-color: $ice-border-color;
+          color: $ice-border-color;
         }
       }
 

@@ -28,7 +28,7 @@
 
      <div class="pokemon-thumb">
       <v-img
-      :src="hovered === pokemon.id ? pokemon.sprites.front_default: pokemon.sprites.other['official-artwork'].front_default" 
+      :src="hovered === pokemon.id ? pokemon.sprites.front_default: pokemon.sprites.other['official-artwork'].front_default? pokemon.sprites.other['official-artwork'].front_default: pokemon.sprites.other.home.front_default" 
       :lazy--src="pokemon.sprites.other['official-artwork'].front_default"
     >
       <template v-slot:placeholder>
