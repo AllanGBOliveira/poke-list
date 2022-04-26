@@ -45,6 +45,13 @@
       </template>
     </v-img>
     </div>
+        <ul class="pokemon-types">
+      <li v-for="(type, i) in pokemon.types" :key="i" :class="type.type.name">
+        <nuxt-link :to="{path: $route.path, query:{type: type.type.name } }" :title="type.type.name">
+          {{type.type.name}}
+        </nuxt-link>
+      </li>
+    </ul>
   </v-card>
 </template>
 
